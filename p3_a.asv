@@ -1,0 +1,12 @@
+load('p3_data.mat','rv');
+k = max(0,ceil(log2(mean(rv))));
+m = 2^k;
+gc = [];
+for i=1:length(rv)
+    ka = floor(rv(i)/m);
+    s1 = [];
+    for j=1:ka
+        s1 = [s1,0];
+    end
+    s1 = [s1,1];
+    
