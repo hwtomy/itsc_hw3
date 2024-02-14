@@ -1,4 +1,4 @@
-function x=markov(a)
+function x=markov(a,N)
     x = zeros(1,N);
     ga = rand(x);
     if ga >0.5

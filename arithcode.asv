@@ -63,13 +63,8 @@ function enc=arithcode(inx,a)
     end
     tc=dec2bin(C)-48;
     if length(tc)>(N1+P)
-        tc=tc(1:N1+P);
-    else
-        hl=N1+P-length(tc);
-        for g=1:hl
-            tc=[tc,0];
-        end
-    end
+        tc=tc(1:N1+P)；
+     
     enc = [enc,tc];
 end
 

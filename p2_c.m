@@ -2,11 +2,11 @@ clc;
 clear all;
 clc;
 
-al = [0.05, 0.5,0.95];
+al = 0.05:0.05:0.95;
 N=19600;
 ratio = zeros(1,3);
-figure;
-for k = 1:3
+% figure;
+for k = 1:length(al)
     a = al(k);
     x = zeros(1,N);
     
@@ -41,8 +41,8 @@ for k = 1:3
     for i=1:length(rv)
         counts(rv(i))= counts(rv(i))+1;
     end
-    plot(1:vmax,log10(counts/length(rv)));
-    hold on;
+    % plot(1:vmax,log10(counts/length(rv)));
+    % hold on;
     for i=1:length(counts)
         counts(i) = ceil(-log2(counts(i)/length(rv)));
     end
@@ -53,10 +53,10 @@ for k = 1:3
     ratio(k) = N/leng;
 end
 
-legend('alpah=0.05','alpha=0.5','alpha=0.95');
-xlabel('value of length');
-ylabel('pmf(log10)');
-title('pmf of run_length values');
+% legend('alpah=0.05','alpha=0.5','alpha=0.95');
+% xlabel('value of length');
+% ylabel('pmf(log10)');
+% title('pmf of run_length values');
 
 figure;
 plot(al, ratio);

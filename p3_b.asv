@@ -6,7 +6,7 @@ al = 0.05:0.05:0.95;
 N=19600;
 ratio = zeros(1,length(al));
 ratio1 = zeros(1,length(al));
-
+% figure;
 for k1 = 1:length(al)
     a = al(k1);
     x = zeros(1,N);

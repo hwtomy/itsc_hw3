@@ -1,4 +1,5 @@
 function rv=runlength(x)
+    N=length(x);
     rv = [1];
     j=1;
     for i=2:N
