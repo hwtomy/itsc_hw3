@@ -39,7 +39,7 @@ for k = 1:3
     vmax = max(rv);
     counts = zeros(1,vmax);
     for i=1:length(rv)
-        counts(rv(i))= counts(rv(i))+1
+        counts(rv(i))= counts(rv(i))+1;
     end
     plot(1:vmax,log10(counts/length(rv)));
     hold on;
