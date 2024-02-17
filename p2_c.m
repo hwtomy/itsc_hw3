@@ -44,7 +44,7 @@ for k = 1:length(al)
     % plot(1:vmax,log10(counts/length(rv)));
     % hold on;
     for i=1:length(counts)
-        counts(i) = ceil(-log2(counts(i)/length(rv)));
+        counts(i) =ceil(-log2(counts(i)/length(rv)));
     end
     leng = 0;
     for i=1:length(rv)

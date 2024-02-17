@@ -45,7 +45,6 @@ hold on
 plot(a2,ho);
 hold on
 legend('entropy after code','origin entropy');
-ylim([0, 1.1]);
 xlabel('value of alpha');
 ylabel('entropy');
 

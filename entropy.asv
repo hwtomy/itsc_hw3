@@ -10,19 +10,18 @@ function estimator=entropy(x,r)
               b=b+1;
        end
    end
-   a=a/N;
-   b=b/N;
+   a1=a/N;
+   b1=b/N;
    if r==0
-       estimator=-(a*log2(a)+b*log2(b));
+       estimator=-(a1*log2(a1)+b1*log2(b1));
    elseif r==1
           for cb=0:1
               for pb=0:1
                   count=sum(x(2:N)==cb&x(1:N-1)==pb);
                     if pb==0
-                        p = count/(N-1);
-                        estimator=estimator-p*log2(p/a);
+                        p = count/a;
+                        estimator=estimator-a1*p*log2(p/a);
                     else
-                        p = count/(N-1);
                        estimator=estimator-p*log2(p/b); 
                     end
               end
